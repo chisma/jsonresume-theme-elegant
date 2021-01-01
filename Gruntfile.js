@@ -1,16 +1,16 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     // Project Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
-          development: {
-            options: {
-              paths: ["assets"]
-            },
-            files: {
-              "assets/css/theme.css": "assets/less/theme.less"
+            development: {
+                options: {
+                    paths: ["assets"]
+                },
+                files: {
+                    "assets/css/theme.css": "assets/less/theme.less"
+                }
             }
-          }
         },
         watch: {
             styles: {
@@ -42,26 +42,26 @@ module.exports = function(grunt) {
         copy: {
             resumejson: {
                 cwd: './',
-                src: [ 'resume.json' ],
+                src: ['resume.json'],
                 dest: './node_modules/resume-schema',
                 expand: true
             },
             build: {
                 cwd: './assets/css',
-                src: [ 'theme.css' ],
+                src: ['theme.css'],
                 dest: './build/assets/css',
                 expand: true
             },
             favicon: {
                 cwd: './',
-                src: [ 'favicon.ico' ],
+                src: ['favicon.ico'],
                 dest: './build/',
                 expand: true
             }
         },
         clean: {
             build: {
-                src: [ 'build' ]
+                src: ['build']
             }
         }
     });
