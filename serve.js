@@ -9,8 +9,10 @@
 const http = require('http');
 const fs = require('fs');
 const resume = JSON.parse(fs.readFileSync('./resume.json', 'utf8'));
+//const resume = JSON.parse(fs.readFileSync("./node_modules/resume-schema/sample.resume.json"))
 const theme = require('./index.js');
 const path = require('path');
+const { sample } = require('underscore');
 
 const PORT = 8888;
 
